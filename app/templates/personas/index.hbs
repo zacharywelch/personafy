@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |persona|}}
+      <tr>
+        <td>{{persona.id}}</td>
+        <td>{{link-to persona.name 'personas.show' persona}}</td>
+        <td>{{persona.description}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

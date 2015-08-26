@@ -1,0 +1,12 @@
+<section>
+  <img src="{{model.photoUrl}}" alt="{{model.name}}">
+  <p>{{model.name}}</p>
+  <p>{{model.description}}</p>
+</section>
+
+<aside>
+  {{input value=model.photoUrl}}
+  {{input value=model.name placeholder="Name"}}
+  {{input value=model.description placeholder="Description"}}
+  {{link-to '<< back' 'personas'}}
+</aside>
