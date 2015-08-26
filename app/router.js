@@ -10,6 +10,10 @@ Router.map(function() {
     this.route('show', {
       path: ':persona_id'
     });
+
+    this.route('edit', {
+      path: ':persona_id/edit'
+    });
   });
 });
 

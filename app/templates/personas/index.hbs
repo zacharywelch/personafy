@@ -10,7 +10,7 @@
     {{#each model as |persona|}}
       <tr>
         <td>{{persona.id}}</td>
-        <td>{{link-to persona.name 'personas.show' persona}}</td>
+        <td>{{link-to persona.name 'personas.edit' persona}}</td>
         <td>{{persona.description}}</td>
       </tr>
     {{/each}}
