@@ -12,11 +12,11 @@ export default Ember.Route.extend({
       model.save().then(() => {
         model.get('behaviors').
           filter(function (behavior) {
-            return behavior.get('isNew')
+            return behavior.get('isNew');
           }).invoke('unloadRecord');
         model.get('goals').
           filter(function (goal) {
-            return goal.get('isNew')
+            return goal.get('isNew');
           }).invoke('unloadRecord');
       });
     },
@@ -27,7 +27,7 @@ export default Ember.Route.extend({
       if (model.get('isNew')) {
         model.deleteRecord();
       } else {
-        model.set('_destroy', '1')
+        model.set('_destroy', '1');
       }
     },
     addBehavior(description) {
