@@ -6,22 +6,33 @@ export default Ember.Route.extend({
   },
   actions: {
     save() {
-      var model = this.modelFor('personas/edit');
-
-      model.save().then(() => {
-        this.transitionTo('personas');
-      });
+      this.modelFor('personas/edit').save();
     },
     cancel() {
-      this.transitionTo('personas');
+      this.modelFor('personas/edit').rollback();
     },
-    removeBehavior(model) {
+    remove(model) {
       model.deleteRecord();
-      return false;
     },
-    removeGoal(model) {
-      model.deleteRecord();
-      return false;
-    }
+    addBehavior() {
+      var persona = this.modelFor('personas/edit');
+      var controller = this.controllerFor('personas/edit');
+      var description = controller.get('newBehavior');
+      this.store.createRecord('behavior', {
+        description: description,
+        persona: persona
+      });
+      controller.set('newBehavior', '');
+    },
+    addGoal() {
+      var persona = this.modelFor('personas/edit');
+      var controller = this.controllerFor('personas/edit');
+      var description = controller.get('newGoal');
+      this.store.createRecord('goal', {
+        description: description,
+        persona: persona
+      });
+      controller.set('newGoal', '');
+    }    
   }
 });

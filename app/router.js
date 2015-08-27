@@ -7,9 +7,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('personas', function () {
-    this.route('edit', {
-      path: ':persona_id/edit'
-    }, function () {
+    this.route('edit', { path: ':persona_id/edit' }, function () {
       this.route('behaviors');
       this.route('goals');
     });
