@@ -13,6 +13,10 @@ Router.map(function() {
 
     this.route('edit', {
       path: ':persona_id/edit'
+    }, function() {
+      this.route('behaviors', function() {
+        this.route('new');
+      });
     });
   });
 });
