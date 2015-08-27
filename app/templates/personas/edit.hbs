@@ -33,7 +33,7 @@
         {{#each model.behaviors as |behavior|}}
           <li>
             {{input value=behavior.description}}
-            <button {{action 'removeBehavior' behavior}} class="destroy"></button>
+            <a href='#fakelink' class='icon icon-remove-sign quiet' {{action 'remove' behavior}}></a>
           </li>
         {{/each}}
       </ul>
@@ -45,7 +45,7 @@
         {{#each model.goals as |goal|}}
           <li>
             {{input value=goal.description}}
-            <button {{action 'removeGoal' goal }} class="destroy"></button>
+            <a href='#fakelink' class='icon icon-remove-sign quiet' {{action 'remove' goal}}></a>
           </li>
         {{/each}}
       </ul>

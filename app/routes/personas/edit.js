@@ -6,22 +6,13 @@ export default Ember.Route.extend({
   },
   actions: {
     save() {
-      var model = this.modelFor('personas/edit');
-
-      model.save().then(() => {
-        this.transitionTo('personas');
-      });
+      this.modelFor('personas/edit').save();
     },
     cancel() {
-      this.transitionTo('personas');
+      this.modelFor('personas/edit').rollback();
     },
-    removeBehavior(model) {
+    remove(model) {
       model.deleteRecord();
-      return false;
-    },
-    removeGoal(model) {
-      model.deleteRecord();
-      return false;
     }
   }
 });
