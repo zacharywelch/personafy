@@ -10,13 +10,13 @@
       <div class="text-left">
         <p>Behaviors</p>
         <ul>
-          {{#each model.behaviors as |behavior|}}
+          {{#each activeBehaviors as |behavior|}}
             <li><label>{{behavior.description}}</label></li>
           {{/each}}
         </ul>
         <p>Goals</p>
         <ul>
-          {{#each model.goals as |goal|}}
+          {{#each activeGoals as |goal|}}
             <li><label>{{goal.description}}</label></li>
           {{/each}}
         </ul>
@@ -30,7 +30,7 @@
     <div id='behaviors-container'>
       <h2>Behaviors</h2>
       <ul>
-        {{#each model.behaviors as |behavior|}}
+        {{#each activeBehaviors as |behavior|}}
           <li>
             {{input value=behavior.description}}
             <a href='#fakelink' class='icon icon-remove-sign quiet' {{action 'remove' behavior}}></a>
@@ -43,7 +43,7 @@
     <div id='goals-container'>
       <h2>Goals</h2>
       <ul>
-        {{#each model.goals as |goal|}}
+        {{#each activeGoals as |goal|}}
           <li>
             {{input value=goal.description}}
             <a href='#fakelink' class='icon icon-remove-sign quiet' {{action 'remove' goal}}></a>
