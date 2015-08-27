@@ -7,25 +7,13 @@ export default DS.Model.extend({
   behaviors: DS.hasMany('behavior', { async: false }),
   goals: DS.hasMany('goal', { async: false }),
   areBehaviorsDirty() {
-    let dirtyBehaviors = false;
-    this.get('behaviors').forEach(function (behavior) {
-      console.log(behavior.get('hasDirtyAttributes'));
-      if (behavior.get('hasDirtyAttributes')) {
-        dirtyBehaviors = true;
-      }
+    return this.get('behaviors').some(function (behavior) {
+      return behavior.get('hasDirtyAttributes');
     });
-
-    return dirtyBehaviors;
   },
   areGoalsDirty() {
-    let dirtyGoals = false;
-    this.get('goals').forEach(function (goal) {
-      console.log(goal.get('hasDirtyAttributes'));
-      if (goal.get('hasDirtyAttributes')) {
-        dirtyGoals = true;
-      }
+    return this.get('goals').some(function (goal) {
+      return goal.get('hasDirtyAttributes');
     });
-
-    return dirtyGoals;
   }
 });
