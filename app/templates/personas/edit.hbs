@@ -36,6 +36,9 @@
             <a href='#fakelink' class='icon icon-remove-sign quiet' {{action 'remove' behavior}}></a>
           </li>
         {{/each}}
+        <li>
+          {{input value=newBehavior action="addBehavior"}}
+        </li>
       </ul>
     </div>
 
@@ -48,6 +51,9 @@
             <a href='#fakelink' class='icon icon-remove-sign quiet' {{action 'remove' goal}}></a>
           </li>
         {{/each}}
+        <li>
+          {{input value=newGoal action="addGoal"}}
+        </li>
       </ul>
     </div>
   </div>
