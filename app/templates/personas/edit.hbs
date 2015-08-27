@@ -12,8 +12,15 @@
 
   <div class="col-xs-6">
     {{partial "personas/form"}}
+
     <div id='behaviors-container'>
       {{#each model.behaviors}}
+        <p>{{description}}</p>
+      {{/each}}
+    </div>
+
+    <div id='goals-container'>
+      {{#each model.goals}}
         <p>{{description}}</p>
       {{/each}}
     </div>

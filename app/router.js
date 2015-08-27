@@ -11,6 +11,7 @@ Router.map(function() {
       path: ':persona_id/edit'
     }, function () {
       this.route('behaviors');
+      this.route('goals');
     });
   });
 });
