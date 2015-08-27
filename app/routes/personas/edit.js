@@ -6,13 +6,29 @@ export default Ember.Route.extend({
   },
   actions: {
     save() {
-      this.modelFor('personas/edit').save();
+      var model = this.modelFor('personas/edit');
+
+      // TODO need to do this based on https://github.com/emberjs/data/issues/2850
+      model.save().then(() => {
+        model.get('behaviors').
+          filter(function (behavior) {
+            return behavior.get('isNew')
+          }).invoke('unloadRecord');
+        model.get('goals').
+          filter(function (goal) {
+            return goal.get('isNew')
+          }).invoke('unloadRecord');
+      });
     },
     cancel() {
       this.modelFor('personas/edit').rollback();
     },
     remove(model) {
-      model.deleteRecord();
+      if (model.get('isNew')) {
+        model.deleteRecord();
+      } else {
+        model.set('_destroy', '1')
+      }
     },
     addBehavior(description) {
       var persona = this.modelFor('personas/edit');
@@ -27,6 +43,6 @@ export default Ember.Route.extend({
         description: description,
         persona: persona
       });
-    }    
+    }
   }
 });
