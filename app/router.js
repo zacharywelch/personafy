@@ -6,17 +6,11 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('personas', function() {
-    this.route('show', {
-      path: ':persona_id'
-    });
-
+  this.route('personas', function () {
     this.route('edit', {
       path: ':persona_id/edit'
-    }, function() {
-      this.route('behaviors', function() {
-        this.route('new');
-      });
+    }, function () {
+      this.route('behaviors');
     });
   });
 });

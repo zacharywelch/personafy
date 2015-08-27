@@ -13,7 +13,9 @@
   <div class="col-xs-6">
     {{partial "personas/form"}}
     <div id='behaviors-container'>
-      {{outlet}}
+      {{#each model.behaviors}}
+        <p>{{description}}</p>
+      {{/each}}
     </div>
   </div>
 </section>
