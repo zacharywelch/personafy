@@ -14,6 +14,14 @@ export default Ember.Route.extend({
     },
     cancel() {
       this.transitionTo('personas');
+    },
+    removeBehavior(model) {
+      model.deleteRecord();
+      return false;
+    },
+    removeGoal(model) {
+      model.deleteRecord();
+      return false;
     }
   }
 });

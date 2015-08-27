@@ -14,15 +14,27 @@
     {{partial "personas/form"}}
 
     <div id='behaviors-container'>
-      {{#each model.behaviors}}
-        <p>{{description}}</p>
-      {{/each}}
+      <h2>Behaviors</h2>
+      <ul>
+        {{#each model.behaviors as |behavior|}}
+          <li>
+            {{input value=behavior.description}}
+            <button {{action 'removeBehavior' behavior}} class="destroy"></button>
+          </li>
+        {{/each}}
+      </ul>
     </div>
 
     <div id='goals-container'>
-      {{#each model.goals}}
-        <p>{{description}}</p>
-      {{/each}}
+      <h2>Goals</h2>
+      <ul>
+        {{#each model.goals as |goal|}}
+          <li>
+            {{input value=goal.description}}
+            <button {{action 'removeGoal' goal }} class="destroy"></button>
+          </li>
+        {{/each}}
+      </ul>
     </div>
   </div>
 </section>
