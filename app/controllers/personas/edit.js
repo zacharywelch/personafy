@@ -14,4 +14,7 @@ export default Ember.Controller.extend({
   }),
 
   isNotDirtyPersona: Ember.computed.not('isDirtyPersona'),
+
+  behaviors: Ember.computed.filterBy('model.behaviors', '_destroy', '0'),
+  goals: Ember.computed.filterBy('model.goals', '_destroy', '0')
 });

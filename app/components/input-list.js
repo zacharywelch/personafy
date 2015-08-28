@@ -4,7 +4,6 @@ export default Ember.Component.extend({
   tagName: 'ul',
   items: null,
   description: null,
-  remaining: Ember.computed.filterBy('items', '_destroy', '0'),
   actions: {
     removeItem(item) {
       this.sendAction('remove', item);
