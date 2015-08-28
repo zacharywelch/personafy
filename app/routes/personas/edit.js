@@ -4,20 +4,14 @@ export default Ember.Route.extend({
   model(params) {
     return this.store.find('persona', params.persona_id);
   },
+  
   actions: {
     save() {
-      var model = this.modelFor('personas/edit');
-
       // TODO need to do this based on https://github.com/emberjs/data/issues/2850
+      var model = this.modelFor('personas/edit');
       model.save().then(() => {
-        model.get('behaviors').
-          filter(function (behavior) {
-            return behavior.get('isNew');
-          }).invoke('unloadRecord');
-        model.get('goals').
-          filter(function (goal) {
-            return goal.get('isNew');
-          }).invoke('unloadRecord');
+        model.get('behaviors').filterBy('isNew', true).invoke('unloadRecord');
+        model.get('goals').filterBy('isNew', true).invoke('unloadRecord');
       });
     },
     
