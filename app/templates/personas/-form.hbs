@@ -11,6 +11,19 @@
     <label for="description">Description</label>
     {{textarea value=model.description placeholder='Description' id='description'}}
   </fieldset>
-  <button {{action "save"}} {{bind-attr disabled=isNotDirtyPersona}} class="btn btn-primary">Save</button>
-  <button {{action "cancel"}} class="btn btn-default">Cancel</button>
+
+  <fieldset>
+    <label>Behaviors</label>
+    {{input-list items=model.behaviors add="createBehavior" remove="destroy"}}
+  </fieldset>
+
+  <fieldset>
+    <label>Goals</label>
+    {{input-list items=model.goals add="createGoal" remove="destroy"}}
+  </fieldset>
+
+  <div class='pad1y'>
+    <button {{action "save"}} {{bind-attr disabled=isNotDirtyPersona}} class="btn btn-primary">Save</button>
+    <button {{action "cancel"}} class="btn btn-default">Cancel</button>
+  </div>
 </form>

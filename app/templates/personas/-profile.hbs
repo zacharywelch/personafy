@@ -1,0 +1,22 @@
+<div class="center contain clearfix keyline-all">
+  <div class="row6 fill-blue pin-top"></div>
+  <div class="contain space-bottom1 row7">
+    <img src="{{model.photoUrl}}" alt="{{model.name}}" class="pin-bottom img-circle" width="80">
+  </div>
+  <h3>{{model.name}}</h3>
+  <h5 class="quiet">{{model.description}}</h5>
+  <div class="text-left">
+    <p>Behaviors</p>
+    <ul>
+      {{#each model.behaviors as |behavior|}}
+        <li><label>{{behavior.description}}</label></li>
+      {{/each}}
+    </ul>
+    <p>Goals</p>
+    <ul>
+      {{#each model.goals as |goal|}}
+        <li><label>{{goal.description}}</label></li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
