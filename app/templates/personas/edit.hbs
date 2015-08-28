@@ -10,13 +10,13 @@
       <div class="text-left">
         <p>Behaviors</p>
         <ul>
-          {{#each activeBehaviors as |behavior|}}
+          {{#each model.behaviors as |behavior|}}
             <li><label>{{behavior.description}}</label></li>
           {{/each}}
         </ul>
         <p>Goals</p>
         <ul>
-          {{#each activeGoals as |goal|}}
+          {{#each model.goals as |goal|}}
             <li><label>{{goal.description}}</label></li>
           {{/each}}
         </ul>
@@ -27,31 +27,11 @@
   <div class="col-xs-6">
     {{partial "personas/form"}}
 
-    <div id='behaviors-container'>
-      <h2>Behaviors</h2>
-      <ul>
-        {{#each activeBehaviors as |behavior|}}
-          <li>
-            {{input value=behavior.description}}
-            <a href='#fakelink' class='icon icon-remove-sign quiet' {{action 'remove' behavior}}></a>
-          </li>
-        {{/each}}
-        {{description-row save="addBehavior"}}
-      </ul>
-    </div>
+    <h2>Behaviors</h2>
+    {{input-list items=model.behaviors add="createBehavior" remove="destroy"}}
 
-    <div id='goals-container'>
-      <h2>Goals</h2>
-      <ul>
-        {{#each activeGoals as |goal|}}
-          <li>
-            {{input value=goal.description}}
-            <a href='#fakelink' class='icon icon-remove-sign quiet' {{action 'remove' goal}}></a>
-          </li>
-        {{/each}}
-        {{description-row save="addGoal"}}
-      </ul>
-    </div>
+    <h2>Goals</h2>
+    {{input-list items=model.goals add="createGoal" remove="destroy"}}
   </div>
 </section>
 

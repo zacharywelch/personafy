@@ -20,29 +20,22 @@ export default Ember.Route.extend({
           }).invoke('unloadRecord');
       });
     },
-    cancel() {
-      this.modelFor('personas/edit').rollback();
-    },
-    remove(model) {
-      if (model.get('isNew')) {
-        model.deleteRecord();
-      } else {
-        model.set('_destroy', '1');
-      }
-    },
-    addBehavior(description) {
-      var persona = this.modelFor('personas/edit');
-      this.store.createRecord('behavior', {
-        description: description,
-        persona: persona
-      });
-    },
-    addGoal(description) {
-      var persona = this.modelFor('personas/edit');
-      this.store.createRecord('goal', {
-        description: description,
-        persona: persona
-      });
+    
+    cancel() { this.modelFor('personas/edit').rollback(); },
+    
+    createBehavior(description) { this.create('behavior', description) },
+    createGoal(description) { this.create('goal', description) },
+    
+    destroy(model) {
+      var isNew = model.get('isNew');
+      isNew ? model.deleteRecord() : model.set('_destroy', '1');
     }
+  },
+
+  create(record, description) {
+    this.store.createRecord(record, {
+      description: description,
+      persona: this.modelFor('personas/edit')
+    });
   }
 });
