@@ -1,9 +1,5 @@
 <form>
   <fieldset>
-    <label for="photo-url">Photo URL</label>
-    {{input value=model.photoUrl id='photo-url'}}
-  </fieldset>
-  <fieldset>
     <label for="name">Name</label>
     {{input value=model.name placeholder='Name' id='name'}}
   </fieldset>
@@ -13,6 +9,7 @@
   </fieldset>
 
   {{color-picker changeColor='changeColor'}}
+  {{avatar-picker changeAvatar='changeAvatar'}}
 
   <fieldset>
     <label>Behaviors</label>

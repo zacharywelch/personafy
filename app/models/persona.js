@@ -3,8 +3,8 @@ import DS from 'ember-data';
 export default DS.Model.extend({
   name: DS.attr('string'),
   description: DS.attr('string'),
-  photoUrl: DS.attr('string'),
   color: DS.attr('string'),
+  avatar: DS.attr('string'),
   behaviors: DS.hasMany('behavior', { async: false }),
   goals: DS.hasMany('goal', { async: false }),
   areBehaviorsDirty() {

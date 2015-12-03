@@ -1,0 +1,10 @@
+<div class='pad2 clearfix center'>
+  {{#each avatar in view.avatars}}
+    <div class='col-sm-2 pad2'>
+      <div class='pad2 row-sm-2' {{action 'changeAvatar' avatar}}>
+        <img src="/avatars/{{avatar}}.jpg" class="pin-bottom img-circle"
+        width="50">
+      </div>
+    </div>
+  {{/each}}
+</div>

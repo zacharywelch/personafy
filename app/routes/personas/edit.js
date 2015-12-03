@@ -27,6 +27,10 @@ export default Ember.Route.extend({
 
     changeColor(color) {
       this.modelFor('personas/edit').set('color', color);
+    },
+
+    changeAvatar(avatar) {
+      this.modelFor('personas/edit').set('avatar', avatar);
     }
   },
 
