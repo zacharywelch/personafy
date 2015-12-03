@@ -1,0 +1,8 @@
+<div class='pad2 clearfix center'>
+  {{#each color in view.colors}}
+    <div class='col-sm-2 pad2'>
+      <div class='pad2 fill-{{color}} row-sm-2 round keyline-all' {{action 'changeColor' color}}>
+      </div>
+    </div>
+  {{/each}}
+</div>

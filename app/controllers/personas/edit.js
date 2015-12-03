@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   isDirtyPersona: Ember.computed('model.name',
                                  'model.description',
+                                 'model.color',
                                  'model.behaviors.@each.description',
                                  'model.behaviors.@each._destroy',
                                  'model.goals.@each.description',

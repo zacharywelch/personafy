@@ -12,6 +12,8 @@
     {{textarea value=model.description placeholder='Description' id='description'}}
   </fieldset>
 
+  {{color-picker changeColor='changeColor'}}
+
   <fieldset>
     <label>Behaviors</label>
     {{input-list items=behaviors add="createBehavior" remove="destroy"}}
