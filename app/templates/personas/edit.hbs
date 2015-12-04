@@ -1,11 +1,15 @@
-<section class="pad2y clearfix">
-  <div class="col-xs-6 pad4x">
-    {{partial "personas/profile"}}
+<div class='container-fluid clearfix'>
+  <div class='contain clearfix pad4y'>
+    <div class='col-sm-6'>
+      {{partial "personas/profile"}}
+    </div>
+
+   <div class='col-sm-5 col-sm-offset-1'>
+      {{partial "personas/form"}}
+    </div>
   </div>
 
-  <div class="col-xs-6">
-    {{partial "personas/form"}}
-  </div>
-</section>
 
-{{link-to '<< back' 'personas'}}
+  {{link-to '<< back' 'personas'}}
+</div>
+

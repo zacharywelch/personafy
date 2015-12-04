@@ -1,25 +1,39 @@
 <form>
-  <fieldset>
-    <label for="name">Name</label>
-    {{input value=model.name placeholder='Name' id='name'}}
-  </fieldset>
-  <fieldset>
-    <label for="description">Description</label>
-    {{textarea value=model.description placeholder='Description' id='description'}}
-  </fieldset>
+  <section class='space-bottom4'>
+    <h4 class='fancy small space-bottom'>Persona Header</h4>
 
-  {{color-picker changeColor='changeColor'}}
-  {{avatar-picker changeAvatar='changeAvatar'}}
+    <small class='strong space-bottom0'>Color</small>
+    {{color-picker changeColor='changeColor'}}
 
-  <fieldset>
-    <label>Behaviors</label>
-    {{input-list items=behaviors add="createBehavior" remove="destroy"}}
-  </fieldset>
+    <small class='strong space-bottom0'>Avatar</small>
+    {{avatar-picker changeAvatar='changeAvatar'}}
 
-  <fieldset>
-    <label>Goals</label>
-    {{input-list items=goals add="createGoal" remove="destroy"}}
-  </fieldset>
+    <fieldset>
+      <label for='name'>Name</label>
+      {{input value=model.name placedholder='Name' id='name' class='stretch'}}
+      <p class='small quiet pad0y'>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href='#fakelink'>Learn more <i class='icon icon-arrow-right'></i></a>
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <label for="description">Description</label>
+      {{textarea value=model.description placeholder='Description' id='description'}}
+    </fieldset>
+  </section>
+
+  <section class='space-bottom4'>
+    <h4 class='fancy small space-bottom'>behaviors</h4>
+
+    {{input-list items=behaviors itemType="behaviour" add="createBehavior" remove="destroy"}}
+  </section>
+
+
+  <section class='space-bottom4'>
+    <h4 class='fancy small space-bottom'>goals</h4>
+
+    {{input-list items=goals itemType="goal" add="createGoal" remove="destroy"}}
+  </section>
 
   <div class='pad1y'>
     <button {{action "save"}} {{bind-attr disabled=isNotDirtyPersona}} class="btn btn-primary">Save</button>

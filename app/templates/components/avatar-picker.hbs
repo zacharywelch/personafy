@@ -1,10 +1,9 @@
-<div class='pad2 clearfix center'>
+<div class='clearfix round clip space-bottom swatches fill-white center'>
   {{#each avatar in view.avatars}}
-    <div class='col-sm-2 pad2'>
-      <div class='pad2 row-sm-2' {{action 'changeAvatar' avatar}}>
-        <img src="/avatars/{{avatar}}.jpg" class="pin-bottom img-circle"
-        width="50">
-      </div>
-    </div>
+    <input id='avatar-{{avatar}}' name='avatar' type='radio' value='{{avatar}}' {{action 'changeAvatar' avatar}}>
+    <label for='avatar-{{avatar}}' class='col-xs-2 row3 pad1 contain clip'>
+      <img src='/avatars/{{avatar}}.jpg' class='pin-topleft'>
+      <i class='icon icon-ok-sign icon-lg center dark'></i>
+    </label>
   {{/each}}
 </div>

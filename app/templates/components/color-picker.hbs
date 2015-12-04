@@ -1,8 +1,9 @@
-<div class='pad2 clearfix center'>
+<div class='clearfix round clip space-bottom swatches'>
+
   {{#each color in view.colors}}
-    <div class='col-sm-2 pad2'>
-      <div class='pad2 fill-{{color}} row-sm-2 round keyline-all' {{action 'changeColor' color}}>
-      </div>
-    </div>
+    <input id='color-{{color}}' name='color' type='radio' value='{{color}}' {{action 'changeColor' color}}>
+    <label for='color-{{color}}' class='col-xs-2 row3 pad1 fill-{{color}}'>
+      <i class='icon icon-ok-sign icon-lg center dark'></i>
+    </label>
   {{/each}}
 </div>

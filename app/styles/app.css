@@ -13,7 +13,22 @@ body:not(.animate) .animate {
   background-color: #41afa5;
 }
 
-/*.navbar.dark .primary a {
-  color: rgba(255,255,255,.75);
+h4.fancy {
+  font-family: 'Bitter Bold', 'Georgia', serif;
+  font-size: 15px;
+  letter-spacing: 1px;
 }
-*/
+
+.swatches input { display: none; }
+.swatches label { cursor: pointer; }
+
+.swatches .icon {
+  visibility: hidden;
+  background-color: rgba(0,0,0,.2);
+  border-radius: 50%;
+}
+
+.swatches input:checked + label .icon {
+  visibility: visible;
+  opacity: 1;
+}

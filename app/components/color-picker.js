@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  colors: ['denim', 'blue', 'gray', 'light', 'light-blue', 'turquoise',
-           'navy-dark', 'purple', 'green', 'yellow', 'red', 'orange'],
+  colors: ['dark', 'blue', 'denim', 'navy', 'turquoise', 'navy-dark',
+           'teal', 'yellow', 'green', 'purple', 'red', 'orange'],
 
   actions: {
     changeColor(color) {
