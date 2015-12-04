@@ -6,8 +6,8 @@ export default Ember.Component.extend({
                 'totaldrama', 'ben10', 'chima', 'clarence', 'ed', 'jtest',
                 'mordecai', 'powerpuff', 'robin', 'toothless'],
 
-  avatars: ['batman', 'bloo', 'dexter', 'kai', 'pokemon', 'finn',
-            'tom', 'powerpuff', 'robin', 'rigby', 'jtest', 'ben10'],
+  avatars: ['batman', 'fizzy', 'ben10', 'cyberchase', 'adventuretime', 'bloo', 
+            'fusionfall', 'gumball', 'wordgirl', 'rigby', 'pokemon', 'super-why'],
 
   actions: {
     changeAvatar(avatar) {

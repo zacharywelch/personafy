@@ -35,6 +35,11 @@ h4.fancy {
   letter-spacing: 1px;
 }
 
+.navbar .primary > .home.active {
+  background: none;
+  color: rgba(255,255,255,.5);
+}
+
 .swatches input { display: none; }
 .swatches label { cursor: pointer; }
 

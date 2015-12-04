@@ -1,37 +1,33 @@
-<div class="fill-gray">
-  <div class='navbar fill-teal col-sm-12 animate clearfix'>
-    <div class='container-fluid contain'>
-      <nav class='col-sm-12 text-right pad1y contain clearfix noprint'>
-        <div class='primary row2'>
-          {{#link-to "personas" class="pull-left quiet dark round"}}
-            <i class='icon icon-list icon-lg center'></i>
-          {{/link-to}}
+<div class='navbar fill-teal col-sm-12 animate clearfix'>
+  <div class='container-fluid contain'>
+    <nav class='col-sm-12 text-right pad1y contain clearfix noprint'>
+      <div class='primary row2 clearfix'>
+        {{#link-to "personas" class="home pull-left quiet dark round"}}
+          <i class='icon icon-list icon-lg center'></i>
+        {{/link-to}}
 
-          <div class='col-sm-6'>
-            <fieldset class='with-icon dark'>
-              <span class='icon icon-search'></span>
-              {{type-ahead content=model name="personas" placeholder="Search personas..." onSelectItem="onSelectItem" searchProperty="name"}}
-            </fieldset>
-          </div>
-
-          <div class='inline clearfix'>
-            {{#link-to 'personas.new' class='pad1 col-xs-6'}}
-              <i class='icon icon-edit icon-md dark'></i>
-            {{/link-to}}
-            <a href='#fakelink' class='pad1 col-xs-6'>
-              <i class='icon icon-bell icon-md dark'></i>
-            </a>
-          </div>
-
-          <a href='#fakelink' class='inline img-circle'>
-            <img src='/avatars/cederholm.jpg' class='img-circle' width='40'>
-          </a>
-
+        <div class='col-sm-6'>
+          <fieldset class='with-icon dark'>
+            <span class='icon icon-search'></span>
+            {{type-ahead content=model name="personas" placeholder="Search personas..." onSelectItem="onSelectItem" searchProperty="name"}}
+          </fieldset>
         </div>
-      </nav>
-    </div>
+
+        <div class='inline clearfix'>
+          {{#link-to 'personas.new' class='pad1 col-xs-6'}}
+            <i class='icon icon-edit icon-md dark'></i>
+          {{/link-to}}
+          <a href='#fakelink' class='pad1 col-xs-6'>
+            <i class='icon icon-bell icon-md dark'></i>
+          </a>
+        </div>
+
+        <a href='#fakelink' class='inline img-circle'>
+          <img src='/avatars/cederholm.jpg' class='img-circle' width='40'>
+        </a>
+      </div>
+    </nav>
   </div>
-
-  {{outlet}}
-
 </div>
+
+{{outlet}}
