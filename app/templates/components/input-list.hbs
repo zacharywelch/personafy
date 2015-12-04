@@ -1,7 +1,22 @@
+<fieldset class='col-sm-10 col-sm-offset-1 space-bottom'>
+  <div class='input-group'>
+    {{input value=description}}
+
+    <div iclass='input-group-btn'>
+      <a class='btn btn-primary' {{action 'addItem' description}}>
+        <i class='icon icon-plus icon-sm pad0r'></i>
+        Add
+      </a>
+    </div>
+  </div>
+</fieldset>
+
 {{#each items as |item|}}
-  <li>
-    {{input value=item.description}}
-    <a href='#fakelink' class='icon icon-remove-sign quiet' {{action 'removeItem' item}}></a>
-  </li>
+  <div class='box round col-sm-10 col-sm-offset-1'>
+    <div class='pad1y pad2x keyline-bottom clearfix'>
+      <i class='icon success col-xs-1'></i>
+      {{item.description}}
+      <a href='#fakelink' class='icon icon-remove-sign quiet' {{action 'removeItem' item}}></a>
+    </div>
+  </div>
 {{/each}}
-{{input value=description enter="addItem"}}
