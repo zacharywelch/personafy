@@ -1,11 +1,15 @@
-<div class='contain clearfix pad4y'>
-  <div class='col-sm-6 pad2y'>
-    <figure class="round contain clip">
-      {{partial "personas/profile"}}
-    </figure>
+<div class="container-fluid clearfix">
+
+  <div class='contain clearfix pad4y'>
+    <div class='col-sm-6 pad2y'>
+      <figure class="round contain clip">
+        {{partial "personas/profile"}}
+      </figure>
+    </div>
+
+    <div class='col-sm-5 col-sm-offset-1 pad2y'>
+      {{partial "personas/form" showErrors=showErrors errors=errors}}
+    </div>
   </div>
 
-  <div class='col-sm-5 col-sm-offset-1 pad2y'>
-    {{partial "personas/form" showErrors=showErrors errors=errors}}
-  </div>
 </div>

@@ -1,19 +1,25 @@
-<div class='contain clearfix pad2y cards'>
-  {{#each model as |persona|}}
-  <div class='col-md-4 col-sm-6 pad2'>
-     {{#link-to 'personas.show' persona class="block row10 lift"}}
-        <figure class='round contain clip'>
-          <header class='fill-{{persona.color}} dark pad4y center'>
-            <img src='avatars/{{persona.avatar}}.jpg' class='img-circle pad1y' width='120'>
-            <h3 class='fancy'>{{persona.name}}</h3>
-            <p class='quiet'>by Someone</p>
-          </header>
-        </figure>
-        {{/link-to}}
+<div class='keyline-bottom row3 fill-lighten2'></div>
+
+<div class="container-fluid clearfix">
+
+  <div class='contain clearfix pad2y cards'>
+    {{#each model as |persona|}}
+    <div class='col-md-4 col-sm-6 pad2'>
+      {{#link-to 'personas.show' persona class="block row10 lift"}}
+      <figure class='round contain clip'>
+        <header class='fill-{{persona.color}} dark pad4y center'>
+          <img src='avatars/{{persona.avatar}}.jpg' class='img-circle pad1y' width='120'>
+          <h3 class='fancy'>{{persona.name}}</h3>
+          <p class='quiet'>by Someone</p>
+        </header>
+      </figure>
+      {{/link-to}}
     </div>
-  {{else}}
+    {{else}}
     <p>
       Oops! Create a new persona!
     </p>
-  {{/each}}
+    {{/each}}
+  </div>
+
 </div>

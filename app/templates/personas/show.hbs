@@ -1,23 +1,27 @@
-<div class="contain clearfix pad4y">
-  <div class="col-sm-8 col-sm-offset-2">
-    <header class="clearfix">
-      <div class="col-sm-9">
-        <a href="#" class="btn btn-default">
-          <i class="icon icon-share icon-md pad0r"></i>Share
-        </a>
-        <a href="#" class="btn btn-default">
-          <i class="icon icon-download-alt icon-md pad0r"></i>Download
-        </a>
-      </div>
-      <div class="col-sm-3 text-right">
-        {{#link-to "personas.edit" model class="btn btn-primary"}}
-          <i class="icon icon-pencil icon-md pad0r"></i>Edit persona
-        {{/link-to}}
-      </div>
-    </header>
+<div class="container-fluid clearfix">
 
-    <figure class="round contain clip pad2y">
-      {{partial "personas/profile"}}
-    </figure>
+  <div class="contain clearfix pad4y">
+    <div class="col-sm-8 col-sm-offset-2">
+      <header class="clearfix">
+        <div class="col-sm-9">
+          <a href="#" class="btn btn-default">
+            <i class="icon icon-share icon-md pad0r"></i>Share
+          </a>
+          <a href="#" class="btn btn-default">
+            <i class="icon icon-download-alt icon-md pad0r"></i>Download
+          </a>
+        </div>
+        <div class="col-sm-3 text-right">
+          {{#link-to "personas.edit" model class="btn btn-primary"}}
+          <i class="icon icon-pencil icon-md pad0r"></i>Edit persona
+          {{/link-to}}
+        </div>
+      </header>
+
+      <figure class="round contain clip pad2y">
+        {{partial "personas/profile"}}
+      </figure>
+    </div>
   </div>
+
 </div>
