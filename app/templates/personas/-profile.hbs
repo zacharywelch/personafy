@@ -1,22 +1,27 @@
-<div class="center contain clearfix keyline-all">
-  <div class="row6 fill-{{model.color}} pin-top"></div>
-  <div class="contain space-bottom1 row7">
-    <img src="/avatars/{{model.avatar}}.jpg" alt="{{model.name}}" class="pin-bottom img-circle" width="80">
-  </div>
-  <h3>{{model.name}}</h3>
-  <h5 class="quiet">{{model.description}}</h5>
-  <div class="text-left">
-    <p>Behaviors</p>
-    <ul>
+<figure class="round contain clip">
+  <header class="row10 fill-denim dark pad4y center">
+    <img src="/avatars/{{model.avatar}}.jpg" alt="{{model.name}}" class="img-circle pad1y" width="120">
+    <h3 class="fancy">{{model.name}}</h3>
+    <p class="quiet">Lorem . Ipsum . Dolor</p>
+  </header>
+  <section class="fill-white pad4x pad2y">
+    <div class="pad2y">
+      <h4 class="fancy small space-bottom">Behaviors</h4>
       {{#each behaviors as |behavior|}}
-        <li><label>{{behavior.description}}</label></li>
+        <p class="clearfix">
+          <i class="icon icon-tag col-xs-1 pad0y"></i>
+          {{behavior.description}}
+        </p>
       {{/each}}
-    </ul>
-    <p>Goals</p>
-    <ul>
+    </div>
+    <div class="pad2y">
+      <h4 class="fancy small space-bottom">Goals</h4>
       {{#each goals as |goal|}}
-        <li><label>{{goal.description}}</label></li>
+        <p class="clearfix">
+          <i class="icon icon-tag col-xs-1 pad0y"></i>
+          {{goal.description}}
+        </p>
       {{/each}}
-    </ul>
-  </div>
-</div>
+    </div>
+  </section>
+</figure>

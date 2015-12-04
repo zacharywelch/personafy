@@ -9,8 +9,24 @@ body:not(.animate) .animate {
           transition:none;
 }
 
-.fill-teal {
-  background-color: #41afa5;
+a { color: #41afa5; }
+a:hover { color: #5bc9bf; }
+
+.fill-teal,
+.btn-primary { background-color: #41afa5; }
+
+.btn-primary:active,
+.btn-primary:hover { background-color: #5bc9bf; }
+
+input.flat,
+.dark input.flat { 
+  background: transparent;
+  border: none;
+}
+
+.dark input.flat::-webkit-input-placeholder {
+  color: #7f7f7f;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 h4.fancy {
@@ -25,10 +41,12 @@ h4.fancy {
 .swatches .icon {
   visibility: hidden;
   background-color: rgba(0,0,0,.2);
-  border-radius: 50%;
+  border-radius: 50%;  
 }
 
 .swatches input:checked + label .icon {
   visibility: visible;
   opacity: 1;
 }
+
+.actions { position: fixed; bottom: 0; }

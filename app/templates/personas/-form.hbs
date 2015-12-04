@@ -40,8 +40,11 @@
     {{input-list items=goals itemType="goal" add="createGoal" remove="destroy"}}
   </section>
 
-  <div class='pad1y'>
-    <button {{action "save"}} {{bind-attr disabled=isNotDirtyPersona}} class="btn btn-primary">Save</button>
+  <div class='text-right'>
     <button {{action "cancel"}} class="btn btn-default">Cancel</button>
+    <button {{action "save"}} {{bind-attr disabled=isNotDirtyPersona}} class="btn btn-primary btn-wide">
+      <i class="icon icon-floppy-disk pad0r"></i>
+      Save changes
+    </button>
   </div>
 </form>
