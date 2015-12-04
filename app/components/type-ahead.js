@@ -10,6 +10,8 @@ export default Ember.TextField.extend({
     this.initTypeahead(this.get('content'));
   },
 
+  classNames: ['stretch', 'typeahead'],
+
   filterContent() {
     let self = this;
 
