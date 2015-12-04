@@ -10,7 +10,7 @@
           <div class='col-sm-6'>
             <fieldset class='with-icon dark'>
               <span class='icon icon-search'></span>
-              <input type='text' class='stretch flat' placeholder='Search personas...' />
+              {{type-ahead content=model name="personas" placeholder="Search personas..." onSelectItem="onSelectItem" searchProperty="name"}}
             </fieldset>
           </div>
 
@@ -24,7 +24,7 @@
           </div>
 
           <a href='#fakelink' class='inline img-circle'>
-            <img src='img/cederholm.jpeg' class='img-circle' width='40'>
+            <img src='/avatars/batman.jpg' class='img-circle' width='40'>
           </a>
 
         </div>
