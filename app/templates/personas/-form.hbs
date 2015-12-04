@@ -42,7 +42,7 @@
 
   <div class='text-right'>
     <button {{action "cancel"}} class="btn btn-default">Cancel</button>
-    <button {{action "save"}} {{bind-attr disabled=isNotDirtyPersona}} class="btn btn-primary btn-wide">
+    <button {{action "save"}} disabled={{if isNotDirtyPersona 'disabled'}} class="btn btn-primary btn-wide">
       <i class="icon icon-floppy-disk pad0r"></i>
       Save changes
     </button>

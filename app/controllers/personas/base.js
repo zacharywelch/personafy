@@ -25,5 +25,21 @@ export default Ember.Controller.extend(PersonaValidations, {
     cancel() {
       return true;
     }
-  }
+  },
+
+  isDirtyPersona: Ember.computed('model.name',
+                                 'model.description',
+                                 'model.color',
+                                 'model.avatar',
+                                 'model.behaviors.@each.description',
+                                 'model.behaviors.@each._destroy',
+                                 'model.goals.@each.description',
+                                 'model.goals.@each._destroy',
+                                 function () {
+    return this.model.get('hasDirtyAttributes') ||
+           this.model.areBehaviorsDirty() ||
+           this.model.areGoalsDirty();
+  }),
+
+  isNotDirtyPersona: Ember.computed.not('isDirtyPersona')
 });

@@ -1,5 +1,5 @@
 <figure class="round contain clip">
-  <header class="row10 fill-denim dark pad4y center">
+  <header class="row10 fill-{{model.color}} dark pad4y center">
     <img src="/avatars/{{model.avatar}}.jpg" alt="{{model.name}}" class="img-circle pad1y" width="120">
     <h3 class="fancy">{{model.name}}</h3>
     <p class="quiet">Lorem . Ipsum . Dolor</p>
@@ -7,7 +7,7 @@
   <section class="fill-white pad4x pad2y">
     <div class="pad2y">
       <h4 class="fancy small space-bottom">Behaviors</h4>
-      {{#each behaviors as |behavior|}}
+      {{#each model.behaviors as |behavior|}}
         <p class="clearfix">
           <i class="icon icon-tag col-xs-1 pad0y"></i>
           {{behavior.description}}
@@ -16,7 +16,7 @@
     </div>
     <div class="pad2y">
       <h4 class="fancy small space-bottom">Goals</h4>
-      {{#each goals as |goal|}}
+      {{#each model.goals as |goal|}}
         <p class="clearfix">
           <i class="icon icon-tag col-xs-1 pad0y"></i>
           {{goal.description}}
