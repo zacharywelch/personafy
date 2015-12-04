@@ -5,11 +5,11 @@ export default Ember.Component.extend({
   description: null,
 
   addPlaceholder: Ember.computed('itemType', function() {
-    return `What sorta ${this.itemType}s do they have?`
+    return `What sorta ${this.itemType}s do they have?`;
   }),
 
   addButton: Ember.computed('itemType', function() {
-    return `Add ${this.itemType}`
+    return `Add ${this.itemType}`;
   }),
 
   actions: {
@@ -17,7 +17,7 @@ export default Ember.Component.extend({
       this.sendAction('remove', item);
     },
     addItem(description) {
-      if ((description != '' && description != null)) {
+      if (description !== '' && description !== null) {
         this.sendAction('add', description);
         this.set('description', '');
       }
