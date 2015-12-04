@@ -18,8 +18,10 @@ export default Ember.Component.extend({
       this.sendAction('remove', item);
     },
     addItem(description) {
-      this.sendAction('add', description);
-      this.set('description', '');
+      if ((description != '' && description != null)) {
+        this.sendAction('add', description);
+        this.set('description', '');
+      }
     }
   }
 });
