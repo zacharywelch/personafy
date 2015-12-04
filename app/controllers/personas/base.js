@@ -1,40 +1,28 @@
 import Ember from 'ember';
+import PersonaValidations from 'personas/mixins/validations/persona';
 
-export default Ember.Controller.extend({
-  hasName:        Ember.computed.notEmpty('model.name'),
-  hasDescription: Ember.computed.notEmpty('model.description'),
-  hasColor:       Ember.computed.notEmpty('model.color'),
-  hasAvatar:      Ember.computed.notEmpty('model.avatar'),
-
-  isValid: Ember.computed.and(
-    'hasName',
-    'hasDescription',
-    'hasColor',
-    'hasAvatar'
-  ),
-
+export default Ember.Controller.extend(PersonaValidations, {
   behaviors: Ember.computed.filterBy('model.behaviors', '_destroy', '0'),
   goals: Ember.computed.filterBy('model.goals', '_destroy', '0'),
 
   actions: {
     save() {
-      console.log('base controller save');
+      let model = this.get('model');
 
-      if (this.get('isValid')) {
-        this.get('model').save().then((persona) => {
+      this.validate().then(() => {
+        model.save().then((persona) => {
           persona.get('behaviors').filterBy('isNew', true).invoke('unloadRecord');
           persona.get('goals').filterBy('isNew', true).invoke('unloadRecord');
           this.transitionToRoute('personas.show', persona);
         });
-      } else {
-        this.set('errorMessage', 'You have to fill all the fields');
-      }
+      }).catch(() => {
+        this.set('showErrors', true);
+      });
 
       return false;
     },
 
     cancel() {
-      console.log('base controller cancel');
       return true;
     }
   }

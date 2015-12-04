@@ -1,11 +1,11 @@
 import PersonasBaseController from './base';
 
 export default PersonasBaseController.extend({
+  showErrors: false,
+
   actions: {
     cancel() {
-      console.log('personas controller new cancel');
       this.transitionToRoute('personas');
-
       return false;
     }
   }
