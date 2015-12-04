@@ -7,6 +7,18 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('personas', function () {
+    this.route('new', function () {
+      this.route('behaviors');
+      this.route('goals');
+    });
+
+    this.route('show', {
+      path: ':persona_id'
+    }, function () {
+      this.route('behaviors');
+      this.route('goals');
+    });
+
     this.route('edit', { path: ':persona_id/edit' }, function () {
       this.route('behaviors');
       this.route('goals');

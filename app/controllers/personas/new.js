@@ -3,7 +3,8 @@ import PersonasBaseController from './base';
 export default PersonasBaseController.extend({
   actions: {
     cancel() {
-      this.transitionToRoute('personas.show', this.get('model'));
+      console.log('personas controller new cancel');
+      this.transitionToRoute('personas');
 
       return false;
     }
