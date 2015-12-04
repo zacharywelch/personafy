@@ -137,6 +137,7 @@ module.exports = function(defaults) {
   app.import('vendor/avatars/robin.jpg',      { destDir: 'avatars' });
   app.import('vendor/avatars/tom.jpg',        { destDir: 'avatars' });
   app.import('vendor/avatars/totaldrama.jpg', { destDir: 'avatars' });
+  app.import('vendor/avatars/cederholm.jpg',  { destDir: 'avatars' });
 
   return app.toTree();
 };
