@@ -1,28 +1,30 @@
-<header class="row10 fill-{{model.color}} dark pad4y center">
-  <img src="/avatars/{{model.avatar}}.jpg" alt="{{model.name}}" class="img-circle pad1y" width="120">
-  <h3 class="fancy">{{model.name}}</h3>
-  <p class="quiet">by Someone</p>
-</header>
-<section class="fill-white pad4x pad2y">
-  <div class="pad2 fill-light-blue">
-    {{model.description}}
-  </div>
-  <div class="pad2y">
-    <h4 class="fancy small space-bottom">Behaviors</h4>
-    {{#each model.behaviors as |behavior|}}
-    <p class="clearfix">
-      <i class="icon icon-tag col-xs-1 pad0y"></i>
-      {{behavior.description}}
-    </p>
-    {{/each}}
-  </div>
-  <div class="pad2y">
-    <h4 class="fancy small space-bottom">Goals</h4>
-    {{#each model.goals as |goal|}}
-    <p class="clearfix">
-      <i class="icon icon-tag col-xs-1 pad0y"></i>
-      {{goal.description}}
-    </p>
-    {{/each}}
-  </div>
-</section>
+<figure class="round contain clip">
+  <header class="row10 fill-{{model.color}} dark pad4y center">
+    <img src="/avatars/{{model.avatar}}.jpg" alt="{{model.name}}" class="img-circle pad1y" width="120">
+    <h3 class="fancy">{{model.name}}</h3>
+    <p class="quiet">by {{model.createdBy}}</p>
+  </header>
+  <section class="fill-white pad4x pad2y">
+    <div class="pad2 fill-light-blue">
+      {{model.description}}
+    </div>
+    <div class="pad2y">
+      <h4 class="fancy small space-bottom">Behaviors</h4>
+      {{#each model.behaviors as |behavior|}}
+        <p class="clearfix">
+          <i class="icon icon-tag col-xs-1 pad0y"></i>
+          {{behavior.description}}
+        </p>
+      {{/each}}
+    </div>
+    <div class="pad2y">
+      <h4 class="fancy small space-bottom">Goals</h4>
+      {{#each model.goals as |goal|}}
+        <p class="clearfix">
+          <i class="icon icon-tag col-xs-1 pad0y"></i>
+          {{goal.description}}
+        </p>
+      {{/each}}
+    </div>
+  </section>
+</figure>
