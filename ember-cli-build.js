@@ -39,10 +39,10 @@ module.exports = function(defaults) {
     destDir: 'fonts/glyphicons'
   });
   app.import('vendor/kabu/fonts/glyphicons/glyphicons-halflings-regular.ttf', {
-    destdir: 'fonts/glyphicons'
+    destDir: 'fonts/glyphicons'
   });
   app.import('vendor/kabu/fonts/glyphicons/glyphicons-halflings-regular.woff', {
-    destdir: 'fonts/glyphicons'
+    destDir: 'fonts/glyphicons'
   });
 
   app.import('vendor/kabu/fonts/icons/icomoon.eot', {

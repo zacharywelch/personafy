@@ -17,8 +17,8 @@ export default Ember.Route.extend({
     
     cancel() { this.modelFor('personas/edit').rollback(); },
     
-    createBehavior(description) { this.create('behavior', description) },
-    createGoal(description) { this.create('goal', description) },
+    createBehavior(description) { this.create('behavior', description); },
+    createGoal(description) { this.create('goal', description); },
     
     destroy(model) {
       var isNew = model.get('isNew');
