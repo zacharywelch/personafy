@@ -7,22 +7,25 @@
     {{color-picker changeColor='changeColor'}}
     {{display-errors errors=errors.model.color showErrors=showErrors}}
 
-    <small class='strong space-bottom0'>Avatar</small>
-    {{avatar-picker changeAvatar='changeAvatar'}}
-    {{display-errors errors=errors.model.avatar showErrors=showErrors}}
-
     <fieldset>
       <label for='name'>Name</label>
-      {{input value=model.name placedholder='Name' id='name' class='stretch'}}
+      {{input value=model.name id='name' class='stretch'}}
       {{display-errors errors=errors.model.name showErrors=showErrors}}
       <p class='small quiet pad0y'>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href='#fakelink'>Learn more <i class='icon icon-arrow-right'></i></a>
       </p>
     </fieldset>
 
+    <small class='strong space-bottom0'>Avatar</small>
+    {{avatar-picker changeAvatar='changeAvatar'}}
+    {{display-errors errors=errors.model.avatar showErrors=showErrors}}
+  </section>
+
+  <section class='space-bottom4'>
+    <h4 class='fancy small space-bottom'>Quote</h4>
+
     <fieldset>
-      <label for="description">Description</label>
-      {{textarea value=model.description placeholder='Description' id='description'}}
+      {{textarea value=model.description id='description' class='stretch'}}
       {{display-errors errors=errors.model.description showErrors=showErrors}}
     </fieldset>
   </section>
@@ -32,7 +35,6 @@
 
     {{input-list items=behaviors itemType="behaviour" add="createBehavior" remove="destroy"}}
   </section>
-
 
   <section class='space-bottom4'>
     <h4 class='fancy small space-bottom'>goals</h4>

@@ -7,11 +7,12 @@
             <i class='icon icon-list icon-lg center'></i>
           {{/link-to}}
 
-          <fieldset class="contain col-sm-6">
-            <div class="input-group">
-              {{type-ahead content=model name="personas" placeholder="Search personas..." onSelectItem="onSelectItem" searchProperty="name"}}
-            </div>
-          </fieldset>
+          <div class='col-sm-6'>
+            <fieldset class='with-icon dark'>
+              <span class='icon icon-search'></span>
+              <input type='text' class='stretch flat' placeholder='Search personas...' />
+            </fieldset>
+          </div>
 
           <div class='inline clearfix'>
             {{#link-to 'personas.new' class='pad1 col-xs-6'}}
