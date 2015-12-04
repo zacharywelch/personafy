@@ -8,7 +8,9 @@
       {{#link-to 'personas.show' persona class="block row10 lift"}}
       <figure class='round contain clip'>
         <header class='fill-{{persona.color}} dark pad4y center'>
-          <img src='avatars/{{persona.avatar}}.jpg' class='img-circle pad1y' width='120'>
+          <div class='pad1y'>
+            <img src='avatars/{{persona.avatar}}.jpg' class='img-circle ring' width='120'>
+          </div>
           <h3 class='fancy'>{{persona.name}}</h3>
           <p class='quiet'>by {{persona.createdBy}}</p>
         </header>

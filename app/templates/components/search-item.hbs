@@ -1,7 +1,9 @@
-<div class="media space-bottom0">
-  <img src="{{model.photoUrl}}" alt="{{model.name}}" class="img-rounded" width="50">
+<div class="media">
+  <div class="media-left pad1r">
+    <img src="/avatars/{{model.avatar}}.jpg" alt="{{model.name}}" class="img-rounded" width="50">
+  </div>
   <div class="media-body">
     <h4>{{model.name}}</h4>
-    <p>{{model.description}}</p>
+    <p class='small'>by {{model.createdBy}}</p>
   </div>
 </div>
