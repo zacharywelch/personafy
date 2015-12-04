@@ -1,9 +1,15 @@
 <div class='contain clearfix pad2y cards'>
   {{#each model as |persona|}}
-    <div class='col-md-4 col-sm-6 pad2'>
-      <div class='fill-white row10 round lift'>
-        {{link-to persona.name 'personas.show' persona}}
-      </div>
+  <div class='col-md-4 col-sm-6 pad2'>
+     {{#link-to 'personas.show' persona class="block row10 lift"}}
+        <figure class='round contain clip'>
+          <header class='fill-{{persona.color}} dark pad4y center'>
+            <img src='avatars/{{persona.avatar}}.jpg' class='img-circle pad1y' width='120'>
+            <h3 class='fancy'>{{persona.name}}</h3>
+            <p class='quiet'>by Someone</p>
+          </header>
+        </figure>
+        {{/link-to}}
     </div>
   {{else}}
     <p>
