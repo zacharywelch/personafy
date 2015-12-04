@@ -1,0 +1,19 @@
+/* Global styles
+------------------------------------------------------- */
+
+/* Prevents animation on initial page load. */
+body:not(.animate) .animate {
+  -webkit-transition:none;
+     -moz-transition:none;
+      -ms-transition:none;
+          transition:none;
+}
+
+.fill-teal {
+  background-color: #41afa5;
+}
+
+/*.navbar.dark .primary a {
+  color: rgba(255,255,255,.75);
+}
+*/

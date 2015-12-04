@@ -1,4 +1,4 @@
-<table class="prose">
+<!-- <table class="prose">
   <thead>
     <tr>
       <th>ID</th>
@@ -15,4 +15,18 @@
       </tr>
     {{/each}}
   </tbody>
-</table>
+</table> -->
+
+<div class='contain clearfix pad2y cards'>
+  {{#each model as |persona|}}
+    <div class='col-md-4 col-sm-6 pad2'>
+      <div class='fill-white row10 round lift'>
+        {{link-to 'persona.edit' photo}}{{persona.name}}{{/link-to}}
+      </div>
+    </div>
+  {{else}}
+    <p>
+      Oops! Create a new persona!
+    </p>
+  {{/each}}
+</div>
