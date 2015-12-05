@@ -1,8 +1,8 @@
 <div class='clearfix round clip space-bottom swatches center'>
 
   {{#each color in view.colors}}
-    <input id='color-{{color}}' name='color' type='radio' value='{{color}}' {{action 'changeColor' color}}>
-    <label for='color-{{color}}' class='col-xs-2 row3 pad1 fill-{{color}}'>
+    <input id='color-{{color}}' name='color' type='radio' value='{{color}}'>
+    <label for='color-{{color}}' class='col-xs-2 row3 pad1 fill-{{color}}' {{action 'changeColor' color preventDefault=false}}>
       <i class='icon icon-ok-sign icon-lg center dark'></i>
     </label>
   {{/each}}

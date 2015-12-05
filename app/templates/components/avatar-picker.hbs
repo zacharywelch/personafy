@@ -1,7 +1,7 @@
 <div class='clearfix round clip space-bottom swatches fill-white center'>
   {{#each avatar in view.avatars}}
-    <input id='avatar-{{avatar}}' name='avatar' type='radio' value='{{avatar}}' {{action 'changeAvatar' avatar}}>
-    <label for='avatar-{{avatar}}' class='col-xs-2 row3 pad1 contain clip'>
+    <input id='avatar-{{avatar}}' name='avatar' type='radio' value='{{avatar}}'>
+    <label for='avatar-{{avatar}}' class='col-xs-2 row3 pad1 contain clip' {{action 'changeAvatar' avatar preventDefault=false}}>
       <img src='/avatars/{{avatar}}.jpg' class='pin-topleft'>
       <i class='icon icon-ok-sign icon-lg center dark'></i>
     </label>
