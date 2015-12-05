@@ -10,8 +10,8 @@
   </div>
 </fieldset>
 
-{{#each items as |item|}}
-  <div class='pad1y keyline-bottom'>
+{{#each items as |item index|}}
+  <div class="pad1y keyline-bottom {{unless index 'keyline-top'}}">
     <a href='#fakelink' class='pull-right pad1l' {{action 'removeItem' item}}>remove</a>
     <p>{{item.description}}</p>
   </div>
