@@ -36,7 +36,7 @@ export default Ember.TextField.extend({
     this.typeahead = this.$().typeahead({
       hint: true,
       highlight: true,
-      minLength: 1,
+      minLength: 1
     }, {
       name: self.get('name') || 'components',
       source: self.filterContent(self.get('content')),
