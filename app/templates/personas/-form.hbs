@@ -43,7 +43,9 @@
   </section>
 
   <div class='text-right'>
-    <button {{action "cancel"}} class="btn btn-default">Cancel</button>
+    <button {{action "cancel"}} class="btn btn-default">
+      <i class="icon icon-remove pad0r"></i>Cancel
+    </button>
     <button {{action "save"}} disabled={{if isNotDirtyPersona 'disabled'}} class="btn btn-primary btn-wide">
       <i class="icon icon-floppy-disk pad0r"></i>
       Save changes
