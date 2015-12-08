@@ -3,6 +3,11 @@
     <header class='box-heading pad2y pad4x center'>
       <h3 class='fancy'>Sign in</h3>
     </header>
+    <div class="flash-messages">
+      {{#each flashMessages.queue as |flash|}}
+        {{flash-message flash=flash}}
+      {{/each}}
+    </div>
     <div class='pad2y pad4x'>
       <div class='btn-group col-xs-12 mobile-cols clearfix space-bottom'>
         <a href='#fakelink' class='btn btn-default col-xs-4'>GITHUB</a>

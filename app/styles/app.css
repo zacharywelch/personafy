@@ -61,3 +61,13 @@ h4.fancy {
   border: 3px solid #fff;
   border-color: rgba(255,255,255,0.5);  
 }
+
+.alert-danger {
+  background-color: #ee6565;
+  color: #fff;
+}
+
+.alert-success {
+  background-color: #56b881;
+  color: #fff;
+}
