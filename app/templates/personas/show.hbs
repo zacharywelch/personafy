@@ -4,16 +4,14 @@
     <div class="col-sm-8 col-sm-offset-2">
       <header class="clearfix">
         <div class="col-xs-7">
-          <a href="#" class="btn btn-default">
-            <i class="icon icon-share icon-md pad0r"></i>Share
-          </a>
+          {{mail-to}}
           <a href="#" class="btn btn-default">
             <i class="icon icon-download-alt icon-md pad0r"></i>Download
           </a>
         </div>
         <div class="col-xs-5 text-right">
           {{#link-to "personas.edit" model class="btn btn-primary"}}
-          <i class="icon icon-pencil icon-md pad0r"></i>Edit persona
+            <i class="icon icon-pencil icon-md pad0r"></i>Edit persona
           {{/link-to}}
         </div>
       </header>
