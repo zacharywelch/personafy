@@ -1,7 +1,7 @@
 {
-  "name": "personas",
+  "name": "personafy",
   "version": "0.0.0",
-  "description": "Small description for personas goes here",
+  "description": "Small description for personafy goes here",
   "private": true,
   "directories": {
     "doc": "doc",

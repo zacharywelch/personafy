@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'personas',
+    modulePrefix: 'personafy',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
