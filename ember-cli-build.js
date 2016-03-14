@@ -3,7 +3,20 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    // Add options here
+    exclude: [
+      'avatars/batman',
+      'avatars/fizzy',
+      'avatars/ben10',
+      'avatars/cyberchase',
+      'avatars/adventuretime',
+      'avatars/bloo',
+      'avatars/fusionfall',
+      'avatars/gumball',
+      'avatars/wordgirl',
+      'avatars/rigby',
+      'avatars/pokemon',
+      'avatars/super-why'
+    ]
   });
 
   // Use `app.import` to add additional libraries to the generated
