@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'personas',
+    modulePrefix: 'personafy',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
@@ -25,12 +25,14 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.API_HOST = 'http://localhost:3000';
   }
 
   if (environment === 'test') {
     // Testem prefers this...
     ENV.baseURL = '/';
     ENV.locationType = 'none';
+    ENV.API_HOST = 'http://localhost:3000';
 
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
@@ -39,8 +41,12 @@ module.exports = function(environment) {
     ENV.APP.rootElement = '#ember-testing';
   }
 
-  if (environment === 'production') {
+  if (environment === 'staging') {
+    ENV.API_HOST = 'https://stg-personafy-api.cb.com';
+  }
 
+  if (environment === 'production') {
+    ENV.API_HOST = 'https://stg-personafy-api.cb.com';
   }
 
   return ENV;

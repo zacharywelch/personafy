@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import PersonaValidations from 'personas/mixins/validations/persona';
+import PersonaValidations from 'personafy/mixins/validations/persona';
 
 export default Ember.Controller.extend(PersonaValidations, {
   behaviors: Ember.computed.filterBy('model.behaviors', '_destroy', '0'),
