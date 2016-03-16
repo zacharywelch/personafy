@@ -28,6 +28,7 @@ export default Ember.Controller.extend(PersonaValidations, {
   },
 
   isDirtyPersona: Ember.computed('model.name',
+                                 'model.role',
                                  'model.description',
                                  'model.color',
                                  'model.avatar',
